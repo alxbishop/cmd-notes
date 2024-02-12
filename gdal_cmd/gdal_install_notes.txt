@@ -1,0 +1,1 @@
+To install gdal into a python venv, gdal needs to first be installed locally using brew install goal. Otherwise during the pip3 install gdal in our venv we might get an error

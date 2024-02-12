@@ -1,0 +1,3 @@
+
+This code sniper will pansharp dimap file format
+gdal_pansharpen.py IMG_01_PNEO4_PAN/DIM_PNEO4_202206241926551_PAN_ORT_PWOI_000025708_1_4_F_1.XML IMG_01_PNEO4_MS-FS/DIM_PNEO4_202206241926551_MS-FS_ORT_PWOI_000025708_1_4_F_1.XML pansharpen_out_dimap.tif

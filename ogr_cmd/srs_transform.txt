@@ -1,0 +1,10 @@
+Change the coordinate reference system from EPSG:4326 to EPSG:3857:
+ogr2ogr \
+  -s_srs EPSG:4326 \
+  -t_srs EPSG:3857 \
+  -f GPKG output.gpkg \
+  input.gpkg
+
+
+
+ogr2ogr -f "GeoJSON" output.geojson input.geojson -s_srs EPSG:32631 -t_srs EPSG:4326
