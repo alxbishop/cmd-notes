@@ -1,0 +1,15 @@
+To modify path variable that have been added from installed packages
+run in terminal
+
+pwd to verify our working dir
+ls -la will display all hidden folder and files
+
+check for .bash_profile
+check for .zshrc
+
+I read that now we only need to modify .zshrc and not .bash_profile
+so run
+
+sudo nano ./.zshrc
+
+modify the text by removing the unwanted portion then ^O should save otherwise ^X to exit and it will ask to save and name for file

@@ -1,0 +1,3 @@
+To run a bash .sh file in zsh
+
+chmod +x ./file_path_name.sh

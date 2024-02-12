@@ -1,0 +1,1 @@
+ogr2ogr -f Geojson GRAIN_UKR_KAKHOVKA_CGL1_2D.geojson GRAIN_UKR_KAKHOVKA_CGL1.geojson -dim 2

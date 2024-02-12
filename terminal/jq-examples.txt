@@ -1,0 +1,21 @@
+ON LOCAL FILE
+
+This line parses a returns the value for the key and returns it as string
+jq '.features[0].properties.id ' job-outputs-response.json
+
+This line parses and returns the value for the key and returns it as a json format
+jq '.features[] | .properties | {id}' job-outputs-response.json
+
+jq '.features[0].properties.platform' job-outputs-response.json
+"PHR1A"
+
+jq -r '.features[0].properties.platform' job-outputs-response.json
+PHR1A
+
+jq -r  <--> this returns the raw string without the " "
+
+PASS VALUE TO VARIABLE
+JOB_ID=$( jq '.features[0].properties.id ' job-outputs-response.json)
+
+PASS VALUE TO VARIABLE FROM CURL GET REQUEST
+STATUS= $(curl -L -s GET https://api.up42.com/projects/$PROJ/jobs -H "Authorization: Bearer $PTOKEN" -H "Content-Type: application/json" | jq -r '.data[0].status')

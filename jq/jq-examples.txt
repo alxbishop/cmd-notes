@@ -1,0 +1,35 @@
+# returns keys for first entry in typical search result geojson
+jq '.features[1]|.properties | keys' sr_aoi-commercial-port.geojson
+
+# return all keys after properties key
+jq '.features[] | .properties | keys' sr_aoi-commercial-port.geojson
+
+# return all first level keys
+jq 'keys' file_path.geojson
+
+# return all values for second entry
+jq '.features[1]|.properties' sr_aoi-commercial-port.geojson
+
+# second third
+jq '.features[2]' sr_aoi-commercial-port.geojson
+
+# return id of prductType mono
+jq '.features[]|.feature.id' 
+
+# test true false for value in id key
+jq '.features[] | .properties.id | test("92")' sr_aoi-commercial-port.geojson
+
+
+
+jq '.features[].properties.acquisitionDate' sr_aoi_fra_agro_2020-04-10_oneatlas.geojson
+
+jq '.features[] | .properties | .acquisitionDate' sr_aoi_fra_agro_2020-04-10_oneatlas.geojson
+
+jq '.features[] | .properties | [.acquisitionDate, .cloudCoverage]' sr_aoi_fra_agro_2020-04-10_oneatlas.geojson
+jq '.features[] | .properties | .acquisitionDate, .cloudCoverage' sr_aoi_fra_agro_2020-04-10_oneatlas.geojson
+jq '.features[] | .properties | (.acquisitionDate, .cloudCoverage)' sr_aoi_fra_agro_2020-04-10_oneatlas.geojson
+
+jq '.features[] | .properties | ".acquisitionDate: .cloudCoverage"' sr_aoi_fra_agro_2020-04-10_oneatlas.geojson
+
+
+jq '.features[0].properties | keys' merged_all_sr.geojson

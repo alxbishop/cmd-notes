@@ -1,0 +1,9 @@
+# add time stamp into a file
+echo "Time log: $(date)" >> ./time-log.txt
+echo "Time log: $(date)" > ./time-log.txt
+>> will append to line
+> will replace content
+
+
+
+ls -1 | wc -l

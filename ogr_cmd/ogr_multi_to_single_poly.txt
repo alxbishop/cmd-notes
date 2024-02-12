@@ -1,0 +1,6 @@
+ogr2ogr -nlt POLYGON aoi_polygon.geojson  aoi_hxgn_phase_1_2km_buffer.geojson
+
+Some forced geometry conversions may result in invalid geometries, for example when forcing conversion of multi-part multipolygons with -nlt POLYGON, the resulting polygon will break the Simple Features 
+rules.
+
+https://gdal.org/programs/ogr2ogr.html#cmdoption-ogr2ogr-nlt
