@@ -1,0 +1,3 @@
+# This should set the edges of a raster file where all bands have value 0 to no-data.
+
+gdalwarp -srcnodata "0 0 0 0" -dstnodata -9999 sharp_utm.tif sharp_utm_nodata.tif
